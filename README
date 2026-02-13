@@ -1,0 +1,111 @@
+📘 Automação E2E com Playwright – Amazon Brasil
+
+Projeto de automação End-to-End desenvolvido com Playwright + TypeScript, validando o fluxo de busca e adição de um livro ao carrinho na Amazon Brasil.
+
+
+🚀 Tecnologias Utilizadas
+
+1. Node.js
+2. TypeScript
+3. Playwright
+4. Google Chrome
+
+📦 Pré-requisitos
+Antes de executar o projeto, é necessário ter instalado:
+
+1. Node.js (versão 18 ou superior recomendada)
+
+2. npm
+
+Verifique se está instalado:
+
+node -v
+npm -v
+
+
+🔧 Instalação
+
+1️⃣ Clone o repositório:
+
+git clone <url-do-repositorio>
+
+
+2️⃣ Acesse a pasta do projeto:
+
+cd nome-do-projeto
+
+
+3️⃣ Instale as dependências:
+
+npm install
+
+
+4️⃣ Instale os navegadores do Playwright:
+
+npx playwright install
+
+
+▶️ Como Executar os Testes
+
+🔹 Executar todos os testes:
+
+    npx playwright test
+
+🔹 Executar com navegador visível (modo headed)
+
+    npx playwright test --headed
+
+🔹 Executar em modo debug
+
+    npx playwright test --debug
+
+
+🌐 Configuração de Navegador
+
+O projeto está configurado para rodar apenas no Google Chrome, conforme definido no arquivo:
+
+playwright.config.ts
+
+
+Essa decisão foi tomada para:
+
+Reduzir o tempo de execução
+
+Simplificar o ambiente de testes
+
+Facilitar debug durante desenvolvimento
+
+
+📁 Estrutura do Projeto:
+
+├── node_modules/
+│
+├── pages/
+│   ├── home.Page.ts
+│   └── product.Page.ts
+│
+├── tests/
+│   └── addBookToCart.spec.ts
+│
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── playwright.config.ts
+└── README
+
+
+🧪 Fluxo Automatizado
+
+O teste executa o seguinte cenário:
+
+Acessa a Amazon Brasil
+
+Pesquisa pelo livro
+
+Abre o produto correto
+
+Valida os detalhes do livro
+
+Adiciona ao carrinho
+
+Verifica a mensagem de confirmação
